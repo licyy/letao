@@ -1,0 +1,106 @@
+/* 引入base.less */
+@import "./base.less";
+
+
+
+/* 内容区域 */
+.nav-link {
+    width: 100%;
+    padding: 10px;
+
+    ul {
+        width: 100%;
+
+        li {
+            float: left;
+            width: 33.33%;
+
+            img {
+                width: 100%;
+            }
+
+        }
+    }
+}
+
+/* 品牌区 */
+.brand {
+    width: 100%;
+    padding: 0 10px;
+
+    >img {
+        width: 100%;
+    }
+
+    ul {
+        width: 100%;
+
+        li {
+            float: left;
+            width: 25%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* 产品详情页 */
+.product {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 100px;
+
+    >img {
+        width: 100%;
+    }
+
+    ul {
+        width: 100%;
+
+        li {
+            float: left;
+            width: 50%;
+            padding: 4px;
+
+            a {
+                display: block;
+                box-shadow: 0 0 5px #aaa;
+                background-color: #fff;
+                padding: 5px;
+                text-align: center;
+
+                img {
+                    width: 100%;
+                }
+
+                font-size: 14px;
+
+                >span {
+                    color: #919191;
+
+                }
+
+                p {
+                    line-height: 38px;
+
+                    span:first-of-type {
+                        color: red;
+                    }
+
+                    del {
+                        color: #bbb;
+                    }
+                }
+                .mui-btn-blue, .mui-btn-primary, input[type=submit] {
+                    color: #fff;
+                    border: 1px solid #006699;
+                    background-color: #006699;
+                    margin-bottom: 5px;
+                }
+            }
+
+        }
+    }
+}

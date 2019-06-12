@@ -1,0 +1,54 @@
+*,
+div,
+a,
+ul,
+li,
+img,
+header,
+nav,
+p,
+h4,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
+}
+/* header部分 */
+.mui-bar.mui-bar-nav {
+  background-color: #006699;
+}
+.mui-bar.mui-bar-nav .mui-title {
+  color: #fff;
+}
+.mui-bar.mui-bar-nav .mui-icon {
+  color: #fff;
+}
+/* footer部分 */
+.mui-bar.mui-bar-tab {
+  background-color: #006699;
+}
+.mui-bar.mui-bar-tab .mui-tab-item {
+  color: #fff;
+}
+.mui-bar.mui-bar-tab .mui-tab-item.mui-active {
+  color: darkorange;
+}

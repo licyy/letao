@@ -1,0 +1,136 @@
+/* 引入base.less */
+*,
+div,
+a,
+ul,
+li,
+img,
+header,
+nav,
+p,
+h4,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
+}
+/* header部分 */
+.mui-bar.mui-bar-nav {
+  background-color: #006699;
+}
+.mui-bar.mui-bar-nav .mui-title {
+  color: #fff;
+}
+.mui-bar.mui-bar-nav .mui-icon {
+  color: #fff;
+}
+/* footer部分 */
+.mui-bar.mui-bar-tab {
+  background-color: #006699;
+}
+.mui-bar.mui-bar-tab .mui-tab-item {
+  color: #fff;
+}
+.mui-bar.mui-bar-tab .mui-tab-item.mui-active {
+  color: darkorange;
+}
+/* 内容区域 */
+.nav-link {
+  width: 100%;
+  padding: 10px;
+}
+.nav-link ul {
+  width: 100%;
+}
+.nav-link ul li {
+  float: left;
+  width: 33.33%;
+}
+.nav-link ul li img {
+  width: 100%;
+}
+/* 品牌区 */
+.brand {
+  width: 100%;
+  padding: 0 10px;
+}
+.brand > img {
+  width: 100%;
+}
+.brand ul {
+  width: 100%;
+}
+.brand ul li {
+  float: left;
+  width: 25%;
+}
+.brand ul li img {
+  width: 100%;
+}
+/* 产品详情页 */
+.product {
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 100px;
+}
+.product > img {
+  width: 100%;
+}
+.product ul {
+  width: 100%;
+}
+.product ul li {
+  float: left;
+  width: 50%;
+  padding: 4px;
+}
+.product ul li a {
+  display: block;
+  box-shadow: 0 0 5px #aaa;
+  background-color: #fff;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+.product ul li a img {
+  width: 100%;
+}
+.product ul li a > span {
+  color: #919191;
+}
+.product ul li a p {
+  line-height: 38px;
+}
+.product ul li a p span:first-of-type {
+  color: red;
+}
+.product ul li a p del {
+  color: #bbb;
+}
+.product ul li a .mui-btn-blue,
+.product ul li a .mui-btn-primary,
+.product ul li a input[type=submit] {
+  color: #fff;
+  border: 1px solid #006699;
+  background-color: #006699;
+  margin-bottom: 5px;
+}
