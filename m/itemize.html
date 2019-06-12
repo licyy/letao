@@ -1,0 +1,97 @@
+<!-- 公共模板 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <h1 id="title" class="mui-title">乐淘云购</h1>
+        <a href="javascript:;" class="mui-icon mui-icon-search mui-pull-right"></a>
+    </header>
+
+    <div class="mui-content mui-row mui-fullscreen">
+        <div class="mui-col-xs-3">
+            <div id="segmentedControls"
+                class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+                <a class="mui-control-item mui-active" data-index="0" href="#content1">选项1</a>
+                <a class="mui-control-item" data-index="1" href="#content2">选项2</a>
+                <a class="mui-control-item" data-index="2" href="#content3">选项3</a>
+                <a class="mui-control-item" data-index="3" href="#content4">选项4</a>
+                <a class="mui-control-item" data-index="4" href="#content5">选项5</a>
+            </div>
+        </div>
+        <div id="segmentedControlContents" class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+            <div id="content1" class="mui-control-content">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">第1个选项卡子项-1</li>
+                    <li class="mui-table-view-cell">第1个选项卡子项-2</li>
+                </ul>
+            </div>
+            <div id="content2" class="mui-control-content">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">第2个选项卡子项-1</li>
+                    <li class="mui-table-view-cell">第2个选项卡子项-2</li>
+                    <li class="mui-table-view-cell">第2个选项卡子项-3</li>
+                    <li class="mui-table-view-cell">第2个选项卡子项-4</li>
+
+                </ul>
+            </div>
+            <div id="content3" class="mui-control-content">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">第3个选项卡子项-1</li>
+                    <li class="mui-table-view-cell">第3个选项卡子项-2</li>
+                    <li class="mui-table-view-cell">第3个选项卡子项-3</li>
+
+
+                </ul>
+            </div>
+            <div id="content4" class="mui-control-content">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">第4个选项卡子项-1</li>
+                    <li class="mui-table-view-cell">第4个选项卡子项-2</li>
+                    <li class="mui-table-view-cell">第4个选项卡子项-3</li>
+                    <li class="mui-table-view-cell">第4个选项卡子项-4</li>
+                    <li class="mui-table-view-cell">第4个选项卡子项-5</li>
+                </ul>
+            </div>
+            <div id="content5" class="mui-control-content">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">第5个选项卡子项-1</li>
+                    <li class="mui-table-view-cell">第5个选项卡子项-2</li>
+                    <li class="mui-table-view-cell">第5个选项卡子项-3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <nav class="mui-bar mui-bar-tab">
+        <a id="defaultTab" class="mui-tab-item" href="tab-webview-subpage-about.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item mui-active" href="tab-webview-subpage-chat.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="tab-webview-subpage-contact.html">
+            <span class="mui-icon  fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="tab-webview-subpage-setting.html">
+            <span class="mui-icon mui-icon-contact"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+</body>
+
+</html>

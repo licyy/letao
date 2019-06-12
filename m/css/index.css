@@ -56,6 +56,9 @@ body {
 .mui-bar.mui-bar-tab .mui-tab-item.mui-active {
   color: darkorange;
 }
+.mui-bar-nav ~ .mui-content {
+  padding-bottom: 50px;
+}
 /* 内容区域 */
 .nav-link {
   width: 100%;
@@ -96,6 +99,9 @@ body {
   width: 100%;
   padding: 0 10px 20px;
   background-color: #fff;
+  /* &:last-of-type {
+        margin-bottom: 60px;
+    } */
 }
 .product > img {
   width: 100%;
@@ -139,7 +145,4 @@ body {
   border: 1px solid #006699;
   background-color: #006699;
   margin-bottom: 5px;
-}
-.product:last-of-type {
-  margin-bottom: 60px;
 }
