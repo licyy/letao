@@ -25,6 +25,9 @@ a {
 a:hover {
   cursor: pointer;
 }
+body {
+  background-color: #fff;
+}
 .clearfix::after,
 .clearfix::before {
   content: "";
@@ -57,6 +60,7 @@ a:hover {
 .nav-link {
   width: 100%;
   padding: 10px;
+  background-color: #fff;
 }
 .nav-link ul {
   width: 100%;
@@ -72,6 +76,7 @@ a:hover {
 .brand {
   width: 100%;
   padding: 0 10px;
+  background-color: #fff;
 }
 .brand > img {
   width: 100%;
@@ -89,11 +94,12 @@ a:hover {
 /* 产品详情页 */
 .product {
   width: 100%;
-  padding: 0 10px;
-  margin-bottom: 100px;
+  padding: 0 10px 20px;
+  background-color: #fff;
 }
 .product > img {
   width: 100%;
+  margin-bottom: 10px;
 }
 .product ul {
   width: 100%;
@@ -133,4 +139,7 @@ a:hover {
   border: 1px solid #006699;
   background-color: #006699;
   margin-bottom: 5px;
+}
+.product:last-of-type {
+  margin-bottom: 60px;
 }

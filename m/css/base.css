@@ -24,6 +24,9 @@ a {
 a:hover {
   cursor: pointer;
 }
+body {
+  background-color: #fff;
+}
 .clearfix::after,
 .clearfix::before {
   content: "";
