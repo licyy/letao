@@ -1,0 +1,102 @@
+*,
+div,
+a,
+ul,
+li,
+img,
+header,
+nav,
+p,
+h4,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+body {
+  background-color: #fff;
+}
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
+}
+/* header部分 */
+.mui-bar.mui-bar-nav {
+  background-color: #006699;
+}
+.mui-bar.mui-bar-nav .mui-title {
+  color: #fff;
+}
+.mui-bar.mui-bar-nav .mui-icon {
+  color: #fff;
+}
+/* footer部分 */
+.mui-bar.mui-bar-tab {
+  background-color: #006699;
+}
+.mui-bar.mui-bar-tab .mui-tab-item {
+  color: #fff;
+}
+.mui-bar.mui-bar-tab .mui-tab-item.mui-active {
+  color: darkorange;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: #fff;
+}
+.container .sortList {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  background-color: #ccc;
+  text-align: center;
+  display: flex;
+}
+.container .sortList > div {
+  width: 50%;
+  height: 100%;
+}
+.container .sortList > div .mui-icon {
+  font-size: 14px;
+}
+.container .sortList > div .mui-icon-arrowdown:before {
+  padding-left: 6px;
+}
+.container .resultBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.container .resultBox > li {
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+}
+.container .resultBox > li a {
+  display: block;
+  padding: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px #006699;
+}
+.container .resultBox > li a img {
+  width: 100%;
+}

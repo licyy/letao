@@ -1,0 +1,94 @@
+<!-- 公共模板 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/category.css">
+
+</head>
+
+<body>
+
+    <!-- 头部标题栏 -->
+    <header class="mui-bar mui-bar-nav">
+        <h1 id="title" class="mui-title">乐淘云购</h1>
+        <a href="javascript:;" class="mui-icon mui-icon-search mui-pull-right"></a>
+    </header>
+
+    <!-- 内容模块，自适应的 -->
+    <div class="my-content">
+        <div class="conetent-left">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul id="TopCategoryList">
+                        <!-- zepto引入template模板根据数据库渲染 -->
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="conetent-right">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul id="SecondCategoryList">
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <nav class="mui-bar mui-bar-tab">
+        <a id="defaultTab" class="mui-tab-item " href="tab-webview-subpage-about.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item mui-active" href="tab-webview-subpage-chat.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="tab-webview-subpage-contact.html">
+            <span class="mui-icon  fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="tab-webview-subpage-setting.html">
+            <span class="mui-icon mui-icon-contact"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <script src="./assets/zepto/zepto.js"></script>
+    <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./js/html.js"></script>
+    <script src="./assets/artTemplate/template.js"></script>
+    <script type="text/template" id="TopCategory">
+        {{each rows as value key}}
+        <li data-id="{{value.id}}">
+        <a href = "javascript:;" > {{value.categoryName}} </a>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/template" id="SecondCategory">
+        {{each rows as value key}}
+        <li>
+                <a href="javascript:;">
+                    <img src="{{value.brandLogo}}" alt="">
+                    <p>{{value.brandName}}</p>
+                </a>
+            </li>
+            {{/each}}
+    </script>
+    <script src="./js/category.js">
+    </script>
+</body>
+
+</html>

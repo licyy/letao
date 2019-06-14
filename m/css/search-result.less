@@ -1,0 +1,60 @@
+@import "./base.less";
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #fff;
+
+    .sortList {
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+        background-color: #ccc;
+        text-align: center;
+        display: flex;
+
+        >div {
+
+            width: 50%;
+            height: 100%;
+
+
+            .mui-icon {
+                font-size: 14px;
+            }
+
+            .mui-icon-arrowdown:before {
+                padding-left: 6px;
+            }
+        }
+
+    }
+
+    .resultBox {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+
+        >li {
+            width: 50%;
+            padding: 5px;
+            text-align: center;
+
+            a {
+                display: block;
+                padding: 5px;
+                border: 1px solid #ccc;
+                box-shadow: 0 0 5px @baseColor;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+
+        }
+    }
+}

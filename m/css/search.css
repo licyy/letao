@@ -1,0 +1,98 @@
+*,
+div,
+a,
+ul,
+li,
+img,
+header,
+nav,
+p,
+h4,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+body {
+  background-color: #fff;
+}
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
+}
+/* header部分 */
+.mui-bar.mui-bar-nav {
+  background-color: #006699;
+}
+.mui-bar.mui-bar-nav .mui-title {
+  color: #fff;
+}
+.mui-bar.mui-bar-nav .mui-icon {
+  color: #fff;
+}
+/* footer部分 */
+.mui-bar.mui-bar-tab {
+  background-color: #006699;
+}
+.mui-bar.mui-bar-tab .mui-tab-item {
+  color: #fff;
+}
+.mui-bar.mui-bar-tab .mui-tab-item.mui-active {
+  color: darkorange;
+}
+.container {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+}
+.container .searchBox {
+  position: relative;
+  height: 30px;
+}
+.container .searchBox input[type="text"] {
+  width: 100%;
+  height: 30px;
+  padding-right: 70px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border: 1px solid #006699;
+}
+.container .searchBox input[type="button"] {
+  position: absolute;
+  height: 30px;
+  width: 60px;
+  right: 0;
+  top: 0;
+  background-color: #006699;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+}
+.container .history {
+  padding: 15px 0;
+  font-size: 16px;
+  color: #aaa;
+}
+.container .history .history-clear {
+  font-size: 16px;
+  line-height: normal;
+}
+.container .history .mui-icon-trash:before {
+  padding-right: 6px;
+}

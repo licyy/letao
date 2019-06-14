@@ -99,9 +99,6 @@ body {
   width: 100%;
   padding: 0 10px 20px;
   background-color: #fff;
-  /* &:last-of-type {
-        margin-bottom: 60px;
-    } */
 }
 .product > img {
   width: 100%;
