@@ -1,5 +1,3 @@
-<!-- 公共模板 -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,38 +9,56 @@
     <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
     <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/user.css">
     <script src="./assets/zepto/zepto.js "></script>
     <script src="./assets/mui/js/mui.js"></script>
+    <script src="./assets/artTemplate/template.js"></script>
     <script src="./js/public.js"></script>
-    <script src="./js/login.js"></script>
+    <script type="text/template" id="userMsg">
+
+        <li class="mui-table-view-cell mui-media">
+                <a href="javascript:;">
+                    <img class="mui-media-object mui-pull-left" src="./images/user.jpg ">
+                    <div class="mui-media-body">
+                        {{mobile}}
+                        <p class='mui-ellipsis'>账号:{{username}}</p>
+                    </div>
+                </a>
+            </li>
+
+    </script>
+    <script src="./js/user.js"></script>
 </head>
 
 <body>
     <header class="mui-bar mui-bar-nav">
-        <h1 id="title" class="mui-title">登陆</h1>
+        <h1 id="title" class="mui-title">用户中心</h1>
         <a href="./index.html" class="mui-icon mui-icon-back mui-pull-left"></a>
+
     </header>
 
     <div class="mui-content">
-        <form class="mui-input-group">
-            <div class="mui-input-row">
-                <label>用户名</label>
-                <input type="text" class="mui-input-clear" placeholder="请输入用户名" id="userName">
-            </div>
-            <div class="mui-input-row">
-                <label>密码</label>
-                <input type="password" class="mui-input-password" placeholder="请输入密码" id="passWord">
-            </div>
-            <div class="mui-button-row">
-                <button type="button" class="mui-btn mui-btn-primary" id="enter">确认</button>
-            </div>
-        </form>
-        <a href="register.html" class="login-now mui-pull-right">前往注册</a>
+        <ul class="mui-table-view" id="userMsg-box">
+
+        </ul>
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">修改密码</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">我的购物车</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">收货地址管理</a>
+            </li>
+            <li class="mui-table-view-cell " id="logout">
+                <a>退出登陆</a>
+            </li>
+        </ul>
     </div>
 
     <nav class="mui-bar mui-bar-tab">
-        <a id="defaultTab" class="mui-tab-item" href="./index.html">
+        <a id="defaultTab" class="mui-tab-item " href="./index.html">
             <span class="mui-icon mui-icon-home"></span>
             <span class="mui-tab-label">首页</span>
         </a>
@@ -54,7 +70,7 @@
             <span class="mui-icon  fa fa-shopping-cart"></span>
             <span class="mui-tab-label">购物车</span>
         </a>
-        <a class="mui-tab-item mui-active" href="./login.html">
+        <a class="mui-tab-item mui-active mui-active" href="./user.html">
             <span class="mui-icon mui-icon-contact"></span>
             <span class="mui-tab-label">会员中心</span>
         </a>

@@ -10,8 +10,10 @@ console.log(keyword);
 
 //设置默认价格排序时升序
 var price = 1
+//设置默认库存排序是升序
+var num = 1
 
-
+var that
 //根据关键字ajax向服务器发送请求
 $(function () {
     mui.init({
@@ -30,9 +32,10 @@ $(function () {
     //将数据按照价格进行排序
     //1：给价格按钮绑定点击事件
     $("#priceSort").on("tap", function () {
+console.log(11);
 
         //2：根据接口文档，ajax传递1升序，2降序
-        price = price == 1 ? 2 : 1
+        price = (price == 1 )? 2 : 1
         /*
         if(price==1){
             price=2
@@ -40,16 +43,36 @@ $(function () {
             price=1
         }
         */
-       //3：对之前的数据进行初始化
-            //清空页面数据
-            $(".resultBox").html("")
-            //恢复当前页面page=1
-            page=1
-            //重新开启上拉加载数据
-            mui('#refreshContainer').pullRefresh().refresh(true);
-            // getData().call(that)
+        //3：对之前的数据进行初始化
+        //清空页面数据
+        $(".resultBox").html("")
+        //恢复当前页面page=1
+        page = 1
+        //重新开启上拉加载数据
+        mui('#refreshContainer').pullRefresh().refresh(true);
+
+        getData.call(that)
     })
 
+    //将数据按照库存进行排序
+    //2：给库存按钮绑定点击事件
+    $("#numSort").on("tap", function () {
+
+        console.log(22);
+
+        //2：根据接口文档，ajax传递1升序，2降序
+        num = num == 1 ? 2 : 1
+
+        //3：对之前的数据进行初始化
+        //清空页面数据
+        $(".resultBox").html("")
+        //恢复当前页面page=1
+        page = 1
+        //重新开启上拉加载数据
+        mui('#refreshContainer').pullRefresh().refresh(true);
+
+        getData.call(that)
+    })
 
 
 })
@@ -77,7 +100,7 @@ function getKeyword(msg, name) {
 
 // 将发送ajax请求封装成函数
 function getData() {
-    var that = this
+    that = this
     $.ajax({
         url: "/product/queryProduct",
         type: "get",
@@ -86,16 +109,22 @@ function getData() {
             "pageSize": pageSize,
             "proName": keyword,
             "price": price,
+            "num": num
         },
         success: function (res) {
             console.log(res);
 
             if (res.data.length == 0) {
+                //this.endPullupToRefresh(true)要求this指向的是mui.init()这个对象
+                //$.ajax()里面this指向的是$，getData函数this谁调用指向谁
+                //mui.init调用getData函数时，将getData中的this指向复制给全局变量that
+                //在其他函数内部使用mui.init对象方法时，将this指向全局变量that 9
                 return that.endPullupToRefresh(true);
             }
 
             var html = template("searchResult", res)
             $(".resultBox").append(html)
+
             that.endPullupToRefresh(false);
         }
     })
