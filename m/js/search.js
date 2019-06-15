@@ -25,23 +25,23 @@ $(function () {
 
     $("#searchBtn").on("click", function () {
 
-        var msg = $("#searchText").val() //$(this).siblings().val()  这是一个字符串
-        console.log(msg.trim());
+        var keyword = $("#searchText").val() //$(this).siblings().val()  这是一个字符串
+        console.log(keyword.trim());
 
-        if (msg.trim().length == 0) {
+        if (keyword.trim().length == 0) {
             return mui.alert("请输入正确内容")
         }
-        location.href = "search-result.html?msg=" + msg
-        // location.assign("search-result.html?msg=" + msg)
-        //点击搜索按钮之后，将搜索关键字msg记录在localStorage中
+        location.href = "search-result.html?keyword=" + keyword
+        // location.assign("search-result.html?keyword=" + keyword)
+        //点击搜索按钮之后，将搜索关键字keyword记录在localStorage中
         if (ltkeyArr.length > 0) {
             ltkeyArr.forEach(function () {
-                if (ltkeyArr.indexOf(msg) == "-1") {
-                    ltkeyArr.push(msg)
+                if (ltkeyArr.indexOf(keyword) == "-1") {
+                    ltkeyArr.push(keyword)
                 }
             })
         } else {
-            ltkeyArr.push(msg)
+            ltkeyArr.push(keyword)
         }
 
         localStorage.setItem("ltkey", JSON.stringify(ltkeyArr))

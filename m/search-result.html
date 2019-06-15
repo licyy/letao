@@ -11,6 +11,25 @@
     <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
     <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/search-result.css">
+    <script src="./assets/zepto/zepto.js"></script>
+    <script src="./assets/artTemplate/template.js"></script>
+    <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./js/search-result.js"></script>
+    <script type="text/template" id="searchResult">
+        {{each data as value key}}
+    <li>
+        <a href="javascript:;">
+            <img src="{{value.pic[0].picAddr}}" alt="">
+            <span>{{value.proName}}</span>
+            <p>
+                <span>￥{{value.price}}</span>
+                <del>￥888.00</del>
+            </p>
+            <button type="button" class="mui-btn mui-btn-primary">点击购买</button>
+        </a>
+    </li>
+    {{/each}}
+    </script>
 
 </head>
 
@@ -20,59 +39,30 @@
         <a href="javascript:;" class="mui-icon mui-icon-search mui-pull-right"></a>
     </header>
 
-    <div class="mui-content">
-        <div class="container">
-            <div class="sortList">
-                <div>销量<span class="mui-icon mui-icon-arrowdown"></span></div>
-                <div>价格<span class="mui-icon mui-icon-arrowdown"></span></div>
+    <div id="refreshContainer">
+
+            <div class="container">
+                <div class="sortList">
+                    <div >销量<span class="mui-icon mui-icon-arrowdown"></span></div>
+                    <div id="priceSort">价格<span class="mui-icon mui-icon-arrowdown"></span></div>
+                </div>
+
+                <ul class="resultBox">
+
+
+                </ul>
+
             </div>
 
-             <ul class="resultBox">
-                <li>
-                    <a href="javascript:;">
-                        <img src="./images/product.jpg" alt="">
-                        <span>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
-                        <p>
-                            <span>¥560.00</span>
-                            <del>¥888.00</del>
-                        </p>
-                        <button type="button" class="mui-btn mui-btn-primary">点击购买</button>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <img src="./images/product.jpg" alt="">
-                        <span>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
-                        <p>
-                            <span>¥560.00</span>
-                            <del>¥888.00</del>
-                        </p>
-                        <button type="button" class="mui-btn mui-btn-primary">点击购买</button>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <img src="./images/product.jpg" alt="">
-                        <span>adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
-                        <p>
-                            <span>¥560.00</span>
-                            <del>¥888.00</del>
-                        </p>
-                        <button type="button" class="mui-btn mui-btn-primary">点击购买</button>
-                    </a>
-                </li>
 
-            </ul>
-
-        </div>
     </div>
 
     <nav class="mui-bar mui-bar-tab">
-        <a id="defaultTab" class="mui-tab-item mui-active" href="tab-webview-subpage-about.html">
+        <a id="defaultTab" class="mui-tab-item mui-active" href="./index.html">
             <span class="mui-icon mui-icon-home"></span>
             <span class="mui-tab-label">首页</span>
         </a>
-        <a class="mui-tab-item" href="tab-webview-subpage-chat.html">
+        <a class="mui-tab-item" href="./category.html">
             <span class="mui-icon mui-icon-bars"></span>
             <span class="mui-tab-label">分类</span>
         </a>
