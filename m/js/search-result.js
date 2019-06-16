@@ -13,7 +13,7 @@ var price = 1
 //设置默认库存排序是升序
 var num = 1
 
-var that
+var that=null
 //根据关键字ajax向服务器发送请求
 $(function () {
     mui.init({
@@ -28,12 +28,12 @@ $(function () {
             }
         }
     });
-
+    console.log(111);
     //将数据按照价格进行排序
     //1：给价格按钮绑定点击事件
-    $("#priceSort").on("tap", function () {
-console.log(11);
-
+    $("#priceSort").on("tap", function (){
+      alert(222)
+// console.log("tap1");
         //2：根据接口文档，ajax传递1升序，2降序
         price = (price == 1 )? 2 : 1
         /*
@@ -52,13 +52,15 @@ console.log(11);
         mui('#refreshContainer').pullRefresh().refresh(true);
 
         getData.call(that)
+
+        return false
     })
 
     //将数据按照库存进行排序
     //2：给库存按钮绑定点击事件
     $("#numSort").on("tap", function () {
 
-        console.log(22);
+        console.log("tap2");
 
         //2：根据接口文档，ajax传递1升序，2降序
         num = num == 1 ? 2 : 1

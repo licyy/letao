@@ -1,4 +1,6 @@
 $(function () {
+
+    //localStorage用来做历史纪录的
     //页面加载的时候就要判断localStorage里面是否有数据
     //ltkey是历史纪录名称
     //ltkeyArr是用来存储localStorage数据的数组

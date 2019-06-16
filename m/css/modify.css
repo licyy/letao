@@ -1,0 +1,67 @@
+*,
+div,
+a,
+ul,
+li,
+img,
+header,
+nav,
+p,
+h4,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+body {
+  background-color: #fff;
+}
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
+}
+/* header部分 */
+.mui-bar.mui-bar-nav {
+  background-color: #006699;
+}
+.mui-bar.mui-bar-nav .mui-title {
+  color: #fff;
+}
+.mui-bar.mui-bar-nav .mui-icon {
+  color: #fff;
+}
+/* footer部分 */
+.mui-bar.mui-bar-tab {
+  background-color: #006699;
+}
+.mui-bar.mui-bar-tab .mui-tab-item {
+  color: #fff;
+}
+.mui-bar.mui-bar-tab .mui-tab-item.mui-active {
+  color: darkorange;
+}
+.mui-input-group .mui-input-row label {
+  font-size: 16px;
+  line-height: normal;
+}
+.mui-input-group .mui-input-row .getCode {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
