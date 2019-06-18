@@ -1,0 +1,65 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/address-list.css">
+    <script src="./assets/zepto/zepto.js "></script>
+    <script src="./assets/artTemplate/template.js"></script>
+    <script src="./assets/mui/js/mui.js"></script>
+    <script src="./js/address-list.js"></script>
+    <script type="text/tamplate" id="addressList">
+        {{each res as value key}}
+        <li class="mui-table-view-cell mui-media  mui-transitioning mui-selected">
+            <div class="mui-slider-right mui-disabled mui-selected" data-id="{{value.id}}">
+                <span class="mui-btn mui-btn-blue" id="edit">编辑</span>
+                <span class="mui-btn mui-btn-red" id="remove">删除</span>
+            </div>
+                <div class="mui-media-body mui-slider-handle">
+                    邮编：{{value.postCode}} &nbsp;&nbsp;收货人：{{value.recipients}}
+                    <p class='mui-ellipsis'>{{value.address}}&nbsp;&nbsp;&nbsp;{{value.addressDetail}}</p>
+                </div>
+
+        </li>
+    {{/each}}
+    </script>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <h1 id="title" class="mui-title">收货地址列表</h1>
+    </header>
+
+    <div class="mui-content">
+        <a href="addAddress.html" class="addAddress" id="addAddress">添加收货地址</a>
+        <ul class="mui-table-view" id="addressBox">
+
+        </ul>
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn mui-btn-danger" id="cancel">返回</button>
+        </div>
+    </div>
+
+    <nav class="mui-bar mui-bar-tab">
+        <a id="defaultTab" class="mui-tab-item " href="./index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="./category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="tab-webview-subpage-contact.html">
+            <span class="mui-icon  fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item mui-active" href="user.html">
+            <span class="mui-icon mui-icon-contact"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+</body>
+
+</html>

@@ -37,6 +37,13 @@ $(function () {
                     }, 1000)
 
                 } else {
+                    if (res.error == "400") {
+                        mui.toast(res.message);
+                        setTimeout(function () {
+                            location.href = "login.html"
+                        }, 1000)
+
+                    }
                     mui.toast(res.message);
                     $("#originPwd").val("")
                     $("#newPwd").val("")

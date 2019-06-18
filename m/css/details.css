@@ -1,0 +1,60 @@
+.mui-slider .mui-slider-group .mui-slider-item img {
+  display: block;
+}
+.details-tittle {
+  font-size: 16px;
+  padding: 10px;
+  color: black;
+}
+.details-price {
+  font-size: 14px;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.details-price .new {
+  font-size: 18px;
+  color: red;
+  font-weight: bold;
+}
+.details-price .old {
+  font-size: 12px;
+  color: #aaa;
+}
+.details-size {
+  font-size: 14px;
+  padding: 10px;
+}
+.details-size span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ccc;
+  line-height: 25px;
+  text-align: center;
+  margin: 5px;
+}
+.details-num {
+  margin: 10px;
+  font-size: 16px;
+}
+.details-car {
+  padding: 10px;
+  margin-bottom: 60px;
+  display: flex;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+}
+.details-car .addShopcar {
+  background-color: goldenrod;
+  flex: 1;
+}
+.details-car .watchShopcar {
+  background-color: blueviolet;
+  flex: 1;
+}
+.size.active {
+  color: red;
+  border: 1px solid yellow;
+}

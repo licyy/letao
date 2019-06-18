@@ -1,26 +1,36 @@
 //页面还没有加载时，就应该将数据先获取到，等页面加载之后再渲染
-var html
+var msg
 $.ajax({
     url: "/user/queryUserMessage",
     type: "get",
     async: false,
     success: function (res) {
-        if (res.error) {
-            mui.toast(res.message)
-            setTimeout(function () {
-                location.href = "login.html"
-            }, 1000)
-        } else {
-             html = template("userMsg", res)
-        }
+        msg = res
+        // if (res.error) {
+        //     mui.toast(res.message)
+        //     setTimeout(function () {
+        //         location.href = "login.html"
+        //     }, 1000)
+        // } else {
+        //     html = template("userMsg", res)
+        // }
 
-        console.log(res);
+        // console.log(res);
 
     }
 
 })
 
 $(function () {
+    //页面加载完成之后再使用模板拼接渲染
+    if (msg.error) {
+        mui.toast(msg.message)
+        setTimeout(function () {
+            location.href = "login.html"
+        }, 1000)
+    } else {
+        var html = template("userMsg", msg)
+    }
 
     $("#userMsg-box").append(html)
     //点击退出登陆

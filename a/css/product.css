@@ -1,0 +1,11 @@
+#productBox tr {
+  border: 1px solid #ccc;
+}
+#productBox tr td,
+#productBox tr th {
+  border: 1px solid #ccc;
+  padding: 10px 0;
+}
+.preview img {
+  width: 200px;
+}
